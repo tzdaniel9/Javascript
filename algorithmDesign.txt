@@ -1,0 +1,16 @@
+Algorithm design techniques
+Brute force - Simple and exhaustive technique that evaluates every possible outcome to find the best solution. e.g Linear search
+
+Greedy - Choose the best option at the current time, without any consideration for the future e.g Dijkstra's Algorithm, Prim's Algorithm and Kruksal's Algorithm
+
+Divide and Conquer - Divide the problem into smaller sub -problems. each sub-problem is then solved and the partial solutions are recombined to determine the overall solution e.g Binary Search, Quick Sort, Merge Sort, and Tower of Hanoi
+
+Dynamic programming - Divide the problem into smaller sub-problems.Break it down into smaller but overlapping sub problems. Store the result and reuse it for the same ub-problems. This is called memoization and is an optimisation technique that improves the time complexity of your algorithm eg Fibonacci numbers and climbing staircase
+
+backtracking - Generate all possible solutions. Check if the solutions satisfies all the given constraints and only then you proceed with generating subsequent solutions. if the constraints are not satisfied, backtrack and go on a different path to find the solution e.g N-Queens problem
+
+Solve more problems:
+Finding the GCD using Euclidian algorithm
+Dinding permutations and combinations of a list of numbers
+Finding the longest common substring in a given substring
+Knapsak problem
