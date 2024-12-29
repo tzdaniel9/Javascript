@@ -21,6 +21,7 @@ class Node {
 class LinkedList {
     constructor() {
         this.head = null
+        this.tail = null
         this.size = 0
     }
 
@@ -37,6 +38,7 @@ class LinkedList {
         const node = new Node(value)
         if (this.isEmpty()) {
             this.head = node
+            this.taill = node
         } else {
             node.next = this.head
             this.head = node
@@ -49,12 +51,10 @@ class LinkedList {
         const node = new Node(value)
         if (this.isEmpty()) {
             this.head = node
+            this.tail = node
         } else {
-            let prev = this.head
-            while (prev.next) {
-                prev = prev.next
-            }
-            prev.next = node
+            this.tail.next = node
+            this.tail = node
         }
         this.size++
     }
@@ -101,6 +101,38 @@ class LinkedList {
 
     }
 
+    // O(1)
+    removeFromfront() {
+        if (this.isEmpty()) {
+            return null
+        }
+        const value = this.head.value
+        this.head = this.head.next
+        this.size--
+        return value
+    }
+
+    // O(1)
+    removeFromEnd() {
+        if (this.isEmpty()) {
+            return null
+        }
+        const value = this.tail.value
+        if (this.size === 1) {
+            this.head = null
+            this.tail = null
+        } else {
+            let prev = this.head
+            while (prev.next !== this.tail) {
+                prev = prev.next
+            }
+            prev.next = null
+            this.tail = prev
+        }
+        this.size--
+        return value
+    }
+
     removeValue(value) {
         // list is empty and removing node from the beginning of the list
         if (this.isEmpty()) {
@@ -144,6 +176,18 @@ class LinkedList {
         return -1
     }
 
+    reverse() {
+        let prev = null
+        let curr = this.head
+        while (curr) {
+            let next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next
+        }
+        this.head = prev
+    }
+
     print() {
         if (this.isEmpty()) {
             console.log('List is empty')
@@ -159,26 +203,22 @@ class LinkedList {
     }
 }
 
-const list = new LinkedList()
+module.exports = LinkedList
+
+/*const list = new LinkedList()
 console.log('list is empty?', list.isEmpty())
 console.log('list size?', list.getSize())
 list.print()
 
-list.insert(10, 0)
+list.append(1)
+list.append(2)
+list.append(3)
+list.prepend(0)
+list.print()
+console.log('list size?', list.getSize())
+
+list.removeFromfront()
 list.print()
 
-list.insert(20, 0)
-list.print()
-
-
-list.insert(30, 1)
-list.print()
-
-
-list.insert(40, 2)
-list.print()
-console.log(list.getSize())
-
-console.log(list.search(60))
-list.print()
-
+list.removeFromEnd()
+list.print()*/
