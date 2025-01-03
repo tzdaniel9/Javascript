@@ -5,9 +5,10 @@ If a name has exactly 4 letters in it, you can be sure that it has to be a frien
  */
 
 function friend(friends){
-    const result = friends.filter((result => result.length === 4))
-    return result
+    return friends.filter((result => result.length === 4))
   }
+
+  const friend = friends => friends.filter(friend => friend.length == 4);
 
   names = ["Ryan", "Kieran", "Jason", "Yous"]
   console.log(friend(names))
