@@ -1,1 +1,1 @@
-to run these tests please use this command "node filename.js" eg summation.js 
+to run these tests please use this command "node filename.js" eg node summation.js 

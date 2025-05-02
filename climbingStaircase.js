@@ -23,3 +23,4 @@ console.log(climbingStairCase(4))
 console.log(climbingStairCase(7))
 
 // Big O = O(n)
+//same as fibonacci

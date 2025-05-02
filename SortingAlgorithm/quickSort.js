@@ -33,6 +33,7 @@ const arr = [8, 20, -2, 4, -6]
 console.log(quickSort(arr))
 
 function quickSortReverse(arr) {
+    //base case for recursion to exit the loop usually when there's 1  item
     if (arr.length < 2) {
         return arr
     }
@@ -54,3 +55,5 @@ console.log(quickSortReverse(arr1))
 
 // Worst case - O(n^2)
 // Avg case = O(logn)
+
+//with recursion you always need a base case to exit the loop
