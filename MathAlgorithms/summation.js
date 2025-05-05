@@ -11,7 +11,26 @@ function summation(number) {
 }
 
 console.log(summation(4)) //10
-console.log(summation(5)) //15
+console.log(summation(7)) //15
 
 //Big O = O(n)
-    
+
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7]
+
+//array.reduce
+function reducer(previousValue, currentvalue) {
+    return previousValue + currentvalue
+}
+
+const sum = numbers.reduce(reducer)
+
+console.log(sum)
+
+//array.reduceRight
+function reducerRight(previousValue, currentvalue) {
+    return previousValue + currentvalue
+}
+
+const add = numbers.reduceRight(reducerRight)
+
+console.log(add)
