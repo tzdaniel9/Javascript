@@ -24,3 +24,24 @@ console.log(climbingStairCase(7))
 
 // Big O = O(n)
 //same as fibonacci
+
+
+function staircase(n){
+    let str = ''
+    let len = n
+    for (let i = 1; i <= n; i++){
+        for (let j = 1; j <= n; j++){
+            if( j < len){
+                str += ' '
+            } else {
+                str += '#'
+            }
+        }
+        len--
+        str += '\n'
+    }
+    console.log(str)
+}
+
+staircase(4)
+staircase(7)
