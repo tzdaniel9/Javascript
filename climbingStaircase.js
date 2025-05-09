@@ -25,7 +25,7 @@ console.log(climbingStairCase(7))
 // Big O = O(n)
 //same as fibonacci
 
-
+// hacker Rank Staircase 
 function staircase(n){
     let str = ''
     let len = n
