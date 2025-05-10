@@ -28,6 +28,18 @@ while (x < 16) {
 
 console.log(Math.max(...sumArray));
 
+
+/**
+ * 1.Create maxSum variable to -63
+ * 2.Loop through rows (until 4)
+ *  a.loop through columns (until 4)
+ *      i. Create top Variable for the sum of top hour glass value
+ *      ii. Create middle variable for the middle value
+ *      iii. Create bottom variable for the sum of bottom values
+ *      iv. Find the max of the maxSum or the top, middle, bottom (added up)
+ * 3.Return maxSum
+ */
+
 function hourGlass(s){
     let maxSum = -63
     for(let i = 0; i < 4; i++){
@@ -35,7 +47,7 @@ function hourGlass(s){
             let top = s[i][j] + s[i][j+1] + s[i][j+2]
             console.log(s[i][j], s[i][j+1], s[i][j+2])
             let mid = s[i+1][j+1]
-            console.log(s[i+1][j+1])
+            console.log('  ' + s[i+1][j+1] + '  ')
             let bot = s[i+2][j] + s[i+2][j+1] + s[i+2][j+2]
             console.log(s[i+2][j], s[i+2][j+1], s[i+2][j+2])
             console.log('\n')
