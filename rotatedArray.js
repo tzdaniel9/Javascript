@@ -20,4 +20,4 @@ function rotLeft(a, d) {
   return rotatedArray
 }
 
-console.log(rotLeft(a, 2))
+console.log(rotLeft(a, 4))
