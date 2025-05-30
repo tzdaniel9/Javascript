@@ -5,6 +5,7 @@
 //Input: (s = 'rat'), (t = 'car'); ----->>>>> output: false
 
 const isAnagram = ((s,t) => {
+    if (s.length !== t.length) return false
     s = s.split("").sort().join("")
     t = t.split("").sort().join("")
 
