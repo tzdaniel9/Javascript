@@ -1,5 +1,8 @@
-// Input: str = "Subscribe to Roadsider", maxlength = 9
-// Output: "Subscribe..."
+/**
+ * Input: str = "Subscribe to Roadsider", maxlength = 9
+ * Output: "Subscribe..."
+ */ 
+ 
 
 function truncate(str, maxlength){
     if(str.length > maxlength){
