@@ -15,10 +15,12 @@ function hammingDistance(x, y) {
 
 console.log(hammingDistance("hello", "h3ll0"));
 
-//The hamming distance between two integers is the number of positions at which the
-// corresponding bits are different
+/**
+ * The hamming distance between two integers is the number of positions at which the
+ * corresponding bits are different
+ * Given two integers x and y, return the hamming distance between them
+ */
 
-//Given two integers x and y, return the hamming distance between them
 
 function hammingDistanceNum(x, y) {
   x = x.toString(2);

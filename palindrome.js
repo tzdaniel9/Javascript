@@ -1,7 +1,8 @@
-// An integer is a palindrome when it reads the same forward and backward
-
-// Input: x = 121 ----->>>>> Output: true
-// Input: x = 10 ----->>>>> Output: false
+/**
+ *  An integer is a palindrome when it reads the same forward and backward
+ *  Input: x = 121 ----->>>>> Output: true
+ *  Input: x = 10 ----->>>>> Output: false
+ */
 
 const isPalindrome = (x) => {
   return x === +x.toString().split("").reverse().join("");
